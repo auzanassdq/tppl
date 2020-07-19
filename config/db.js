@@ -5,7 +5,8 @@ const URI = 'mongodb://localhost:27017/tppl'
 
 mongoose.connect(URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 });
 
 const db = mongoose.connection

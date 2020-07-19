@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const matkulSchema = new mongoose.Schema({
   kode: String,
-  nama_matkul: String,
+  nama: String,
   semester: Number,
   sks: Number
 },

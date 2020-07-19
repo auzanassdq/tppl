@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const dosenSchema = new mongoose.Schema({
-  kode: String,
+  nidn: String,
   name: String,
   email: String,
   password: String,

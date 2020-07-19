@@ -1,11 +1,19 @@
 const mongoose = require('mongoose')
 
 const pertemuanSchema = new mongoose.Schema({
-  kode: String,
   tanggal: Date,
   dosen: {type: mongoose.Schema.Types.ObjectId, ref: 'dosen'},
   matkul: {type: mongoose.Schema.Types.ObjectId, ref: 'matkul'},
-  mahasiswa: [{type: mongoose.Schema.Types.ObjectId, ref: 'mahasiswa'}],
+  kehadiran: [
+    // INI YANG BENAR
+    // {type: mongoose.Schema.Types.ObjectId, ref: 'kehadiran'}
+
+    // INI PERCOBAAN
+    {
+      mahasiswa: {type: mongoose.Schema.Types.ObjectId, ref: 'mahasiswa'},
+      status: String
+    }
+  ],
 },
 { timestamps: true }
 )
